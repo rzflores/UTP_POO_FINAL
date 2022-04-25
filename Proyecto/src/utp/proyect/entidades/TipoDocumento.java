@@ -1,6 +1,6 @@
 package utp.proyect.entidades;
 
-public class Especialidad {
+public class TipoDocumento {
 	private int id;
 	private String nombre;
 	public int getId() {
@@ -15,4 +15,5 @@ public class Especialidad {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	
 }

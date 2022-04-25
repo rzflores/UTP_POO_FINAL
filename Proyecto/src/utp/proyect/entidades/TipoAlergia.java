@@ -1,6 +1,6 @@
 package utp.proyect.entidades;
 
-public class Especialidad {
+public class TipoAlergia {
 	private int id;
 	private String nombre;
 	public int getId() {
