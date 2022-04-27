@@ -1,14 +1,23 @@
 package utp.proyect.entidades;
 
 public class TipoDocumento {
-	private int id;
+	private int idTipoDocumento;
 	private String nombre;
-	public int getId() {
-		return id;
+	private String nombreCorto;
+	
+	
+	public int getIdTipoDocumento() {
+		return idTipoDocumento;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setIdTipoDocumento(int idTipoDocumento) {
+		this.idTipoDocumento = idTipoDocumento;
 	}
+	public String getNombreCorto() {
+		return nombreCorto;
+	}
+	public void setNombreCorto(String nombreCorto) {
+		this.nombreCorto = nombreCorto;
+	}	
 	public String getNombre() {
 		return nombre;
 	}

@@ -3,27 +3,58 @@ package utp.proyect.entidades;
 import java.util.ArrayList;
 
 
-public class Doctor extends Usuario{
-	private String numeroColegiatura;
-	private int aniosExperiencia;
-	private ArrayList<Especialidad> ListaEspecialidad;
-	public String getNumeroColegiatura() {
-		return numeroColegiatura;
+public class Doctor extends Persona{
+	private int idDoctor;
+	private String codigoColegiatura;
+	private double timepoExperiencia;
+	private TipoEspecialidad tipoEspecialidad;
+	
+	
+	public Doctor(int idDoctor, String codigoColegiatura, double timepoExperiencia, TipoEspecialidad tipoEspecialidad) {
+		super();
+		this.idDoctor = idDoctor;
+		this.codigoColegiatura = codigoColegiatura;
+		this.timepoExperiencia = timepoExperiencia;
+		this.tipoEspecialidad = tipoEspecialidad;
 	}
-	public void setNumeroColegiatura(String numeroColegiatura) {
-		this.numeroColegiatura = numeroColegiatura;
+	
+	public Doctor() {};
+	
+	
+	@Override
+	public String toString() {
+		return "Doctor [idDoctor=" + idDoctor + ", codigoColegiatura=" + codigoColegiatura + ", timepoExperiencia="
+				+ timepoExperiencia + ", tipoEspecialidad=" + tipoEspecialidad + "]";
 	}
-	public int getAniosExperiencia() {
-		return aniosExperiencia;
+
+
+
+
+	public int getIdDoctor() {
+		return idDoctor;
 	}
-	public void setAniosExperiencia(int aniosExperiencia) {
-		this.aniosExperiencia = aniosExperiencia;
+	public void setIdDoctor(int idDoctor) {
+		this.idDoctor = idDoctor;
+	}	
+	public String getCodigoColegiatura() {
+		return codigoColegiatura;
 	}
-	public List<Especialidad> getListaEspecialidad() {
-		return ListaEspecialidad;
+	public void setCodigoColegiatura(String codigoColegiatura) {
+		this.codigoColegiatura = codigoColegiatura;
 	}
-	public void setListaEspecialidad(ArrayList<Especialidad> listaEspecialidad) {
-		ListaEspecialidad = listaEspecialidad;
+	public double getTimepoExperiencia() {
+		return timepoExperiencia;
 	}
+	public void setTimepoExperiencia(double timepoExperiencia) {
+		this.timepoExperiencia = timepoExperiencia;
+	}
+	public TipoEspecialidad getTipoEspecialidad() {
+		return tipoEspecialidad;
+	}
+	public void setTipoEspecialidad(TipoEspecialidad tipoEspecialidad) {
+		this.tipoEspecialidad = tipoEspecialidad;
+	}
+	
+	
 	
 }

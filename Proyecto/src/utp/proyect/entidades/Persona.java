@@ -1,24 +1,19 @@
 package utp.proyect.entidades;
 
-public class Usuario {
-	private int id;
+public class Persona {	
 	private String primerNombre;
 	private String segundoNombre;
 	private String primerApellido;
 	private String segundoApellido;
 	private int edad;
-	private String numeroDocumento;
-	private String celular;
+	private String numeroDocumento;	
 	private String correoElectronico;
 	private String contrasenia;
+	private String celular;
 	private TipoDocumento tipoDocumento;
 	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+		
+	
 	public String getPrimerNombre() {
 		return primerNombre;
 	}
@@ -79,6 +74,5 @@ public class Usuario {
 	public void setTipoDocumento(TipoDocumento tipoDocumento) {
 		this.tipoDocumento = tipoDocumento;
 	}
-	
 	
 }

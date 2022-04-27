@@ -4,39 +4,50 @@ import java.sql.Time;
 import java.util.Date;
 
 public class Consulta {
-	private int id;
+	
+	private int idConsulta;
 	private Date fecha;
-	private Time hora;
+	private Time horaIncio;
+	private Time horaFin;
+	private double costo;
 	private Paciente paciente;
-	private Doctor doctor;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+
+
 	public Date getFecha() {
 		return fecha;
 	}
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
-	}
-	public Time getHora() {
-		return hora;
-	}
-	public void setHora(Time hora) {
-		this.hora = hora;
-	}
+	}	
 	public Paciente getPaciente() {
 		return paciente;
 	}
 	public void setPaciente(Paciente paciente) {
 		this.paciente = paciente;
 	}
-	public Doctor getDoctor() {
-		return doctor;
+	public int getIdConsulta() {
+		return idConsulta;
 	}
-	public void setDoctor(Doctor doctor) {
-		this.doctor = doctor;
+	public void setIdConsulta(int idConsulta) {
+		this.idConsulta = idConsulta;
 	}
+	public Time getHoraIncio() {
+		return horaIncio;
+	}
+	public void setHoraIncio(Time horaIncio) {
+		this.horaIncio = horaIncio;
+	}
+	public Time getHoraFin() {
+		return horaFin;
+	}
+	public void setHoraFin(Time horaFin) {
+		this.horaFin = horaFin;
+	}
+	public double getCosto() {
+		return costo;
+	}
+	public void setCosto(double costo) {
+		this.costo = costo;
+	}
+	
 }
