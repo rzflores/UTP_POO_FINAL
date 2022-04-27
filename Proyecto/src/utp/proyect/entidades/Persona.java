@@ -12,7 +12,33 @@ public class Persona {
 	private String celular;
 	private TipoDocumento tipoDocumento;
 	
+	
 		
+	public Persona(String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, int edad,
+			String numeroDocumento, String correoElectronico, String contrasenia, String celular,
+			TipoDocumento tipoDocumento) {
+		super();
+		this.primerNombre = primerNombre;
+		this.segundoNombre = segundoNombre;
+		this.primerApellido = primerApellido;
+		this.segundoApellido = segundoApellido;
+		this.edad = edad;
+		this.numeroDocumento = numeroDocumento;
+		this.correoElectronico = correoElectronico;
+		this.contrasenia = contrasenia;
+		this.celular = celular;
+		this.tipoDocumento = tipoDocumento;
+	}
+	
+	public Persona() {};
+
+	@Override
+	public String toString() {
+		return "Persona [primerNombre=" + primerNombre + ", segundoNombre=" + segundoNombre + ", primerApellido="
+				+ primerApellido + ", segundoApellido=" + segundoApellido + ", edad=" + edad + ", numeroDocumento="
+				+ numeroDocumento + ", correoElectronico=" + correoElectronico + ", contrasenia=" + contrasenia
+				+ ", celular=" + celular + ", tipoDocumento=" + tipoDocumento + "]";
+	}
 	
 	public String getPrimerNombre() {
 		return primerNombre;

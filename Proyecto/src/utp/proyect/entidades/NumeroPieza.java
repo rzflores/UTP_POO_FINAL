@@ -1,15 +1,34 @@
 package utp.proyect.entidades;
 
 public class NumeroPieza {
-	private int id;
+	private int idNumeroPieza;
 	private int numero;
 	private String observacion;
 	private TipoDiagnostico tipoDiagnostico;
-	public int getId() {
-		return id;
+	
+		
+	@Override
+	public String toString() {
+		return "NumeroPieza [idNumeroPieza=" + idNumeroPieza + ", numero=" + numero + ", observacion=" + observacion
+				+ ", tipoDiagnostico=" + tipoDiagnostico + "]";
 	}
-	public void setId(int id) {
-		this.id = id;
+	
+	public NumeroPieza(int idNumeroPieza, int numero, String observacion, TipoDiagnostico tipoDiagnostico) {
+		super();
+		this.idNumeroPieza = idNumeroPieza;
+		this.numero = numero;
+		this.observacion = observacion;
+		this.tipoDiagnostico = tipoDiagnostico;
+	}
+	
+	public NumeroPieza() {};
+	
+	
+	public int getIdNumeroPieza() {
+		return idNumeroPieza;
+	}
+	public void setIdNumeroPieza(int idNumeroPieza) {
+		this.idNumeroPieza = idNumeroPieza;
 	}
 	public int getNumero() {
 		return numero;

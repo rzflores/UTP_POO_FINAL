@@ -12,6 +12,26 @@ public class Consulta {
 	private double costo;
 	private Paciente paciente;
 
+	
+	public Consulta(int idConsulta, Date fecha, Time horaIncio, Time horaFin, double costo, Paciente paciente) {
+		super();
+		this.idConsulta = idConsulta;
+		this.fecha = fecha;
+		this.horaIncio = horaIncio;
+		this.horaFin = horaFin;
+		this.costo = costo;
+		this.paciente = paciente;
+	}
+	
+	public Consulta() {};
+	
+	@Override
+	public String toString() {
+		return "Consulta [idConsulta=" + idConsulta + ", fecha=" + fecha + ", horaIncio=" + horaIncio + ", horaFin="
+				+ horaFin + ", costo=" + costo + ", paciente=" + paciente + "]";
+	}
+	
+
 
 	public Date getFecha() {
 		return fecha;

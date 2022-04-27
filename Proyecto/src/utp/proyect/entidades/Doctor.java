@@ -1,6 +1,5 @@
 package utp.proyect.entidades;
 
-import java.util.ArrayList;
 
 
 public class Doctor extends Persona{
@@ -10,23 +9,37 @@ public class Doctor extends Persona{
 	private TipoEspecialidad tipoEspecialidad;
 	
 	
-	public Doctor(int idDoctor, String codigoColegiatura, double timepoExperiencia, TipoEspecialidad tipoEspecialidad) {
-		super();
+	
+	
+	@Override
+	public String toString() {
+		return super.toString() + "Doctor [idDoctor=" + idDoctor + ", codigoColegiatura=" + codigoColegiatura + ", timepoExperiencia="
+				+ timepoExperiencia + ", tipoEspecialidad=" + tipoEspecialidad + "]";
+	}
+
+
+
+
+
+	public Doctor(String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, int edad,
+			String numeroDocumento, String correoElectronico, String contrasenia, String celular,
+			TipoDocumento tipoDocumento, int idDoctor, String codigoColegiatura, double timepoExperiencia,
+			TipoEspecialidad tipoEspecialidad) {
+		super(primerNombre, segundoNombre, primerApellido, segundoApellido, edad, numeroDocumento, correoElectronico,
+				contrasenia, celular, tipoDocumento);
 		this.idDoctor = idDoctor;
 		this.codigoColegiatura = codigoColegiatura;
 		this.timepoExperiencia = timepoExperiencia;
 		this.tipoEspecialidad = tipoEspecialidad;
 	}
-	
+
+
+
+
+
 	public Doctor() {};
 	
 	
-	@Override
-	public String toString() {
-		return "Doctor [idDoctor=" + idDoctor + ", codigoColegiatura=" + codigoColegiatura + ", timepoExperiencia="
-				+ timepoExperiencia + ", tipoEspecialidad=" + tipoEspecialidad + "]";
-	}
-
 
 
 

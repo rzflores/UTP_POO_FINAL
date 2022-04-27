@@ -9,6 +9,27 @@ public class Turno {
 	private Time horaFin;
 	private ArrayList<Consulta> listaConsultas;
 	private Doctor doctor;
+	
+	
+	@Override
+	public String toString() {
+		return "Turno [idTurno=" + idTurno + ", horaInicio=" + horaInicio + ", horaFin=" + horaFin + ", listaConsultas="
+				+ listaConsultas + ", doctor=" + doctor + "]";
+	}
+	
+	
+	public Turno(int idTurno, Time horaInicio, Time horaFin, ArrayList<Consulta> listaConsultas, Doctor doctor) {
+		super();
+		this.idTurno = idTurno;
+		this.horaInicio = horaInicio;
+		this.horaFin = horaFin;
+		this.listaConsultas = listaConsultas;
+		this.doctor = doctor;
+	}
+	
+	public Turno() {}
+
+
 	public int getIdTurno() {
 		return idTurno;
 	}

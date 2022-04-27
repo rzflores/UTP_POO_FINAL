@@ -5,15 +5,24 @@ public class Administrador extends Persona {
 	
 	
 	
+
 	@Override
 	public String toString() {
-		return "Administrador [idAdminitrador=" + idAdminitrador + "]";
+		return super.toString() + "Administrador [idAdminitrador=" + idAdminitrador + "]";
 	}
 	
-	public Administrador(int idAdminitrador) {
-		super();
+	
+
+	public Administrador(String primerNombre, String segundoNombre, String primerApellido, String segundoApellido,
+			int edad, String numeroDocumento, String correoElectronico, String contrasenia, String celular,
+			TipoDocumento tipoDocumento, int idAdminitrador) {
+		super(primerNombre, segundoNombre, primerApellido, segundoApellido, edad, numeroDocumento, correoElectronico,
+				contrasenia, celular, tipoDocumento);
 		this.idAdminitrador = idAdminitrador;
 	}
+
+
+
 	public Administrador(){};
 
 	public int getIdAdminitrador() {
