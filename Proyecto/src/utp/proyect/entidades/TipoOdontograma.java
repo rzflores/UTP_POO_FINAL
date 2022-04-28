@@ -4,25 +4,47 @@ public class TipoOdontograma {
 	private int idTipoOdontograma;
 	private String nombre;
 	private String nombreCorto;
+	private int cantidadPiezas;
 	
 	
 	
-	@Override
-	public String toString() {
-		return "TipoOdontograma [idTipoOdontograma=" + idTipoOdontograma + ", nombre=" + nombre + ", nombreCorto="
-				+ nombreCorto + "]";
-	}
-		
+	
+	
+	
 
-	public TipoOdontograma(int idTipoOdontograma, String nombre, String nombreCorto) {
+
+
+	public TipoOdontograma(int idTipoOdontograma, String nombre, String nombreCorto, int cantidadPiezas) {
 		super();
 		this.idTipoOdontograma = idTipoOdontograma;
 		this.nombre = nombre;
 		this.nombreCorto = nombreCorto;
+		this.cantidadPiezas = cantidadPiezas;
 	}
 	
+
+
+	@Override
+	public String toString() {
+		return "TipoOdontograma [idTipoOdontograma=" + idTipoOdontograma + ", nombre=" + nombre + ", nombreCorto="
+				+ nombreCorto + ", cantidadPiezas=" + cantidadPiezas + "]";
+	}
+
+
+
+
 	public TipoOdontograma() {};
 
+	public int getCantidadPiezas() {
+		return cantidadPiezas;
+	}
+	
+	
+	
+	public void setCantidadPiezas(int cantidadPiezas) {
+		this.cantidadPiezas = cantidadPiezas;
+	}
+	
 
 
 	public int getIdTipoOdontograma() {

@@ -5,7 +5,7 @@ package utp.proyect.entidades;
 public class Doctor extends Persona{
 	private int idDoctor;
 	private String codigoColegiatura;
-	private double timepoExperiencia;
+	private double tiempoExperiencia;
 	private TipoEspecialidad tipoEspecialidad;
 	
 	
@@ -14,7 +14,7 @@ public class Doctor extends Persona{
 	@Override
 	public String toString() {
 		return super.toString() + "Doctor [idDoctor=" + idDoctor + ", codigoColegiatura=" + codigoColegiatura + ", timepoExperiencia="
-				+ timepoExperiencia + ", tipoEspecialidad=" + tipoEspecialidad + "]";
+				+ tiempoExperiencia + ", tipoEspecialidad=" + tipoEspecialidad + "]";
 	}
 
 
@@ -29,7 +29,7 @@ public class Doctor extends Persona{
 				contrasenia, celular, tipoDocumento);
 		this.idDoctor = idDoctor;
 		this.codigoColegiatura = codigoColegiatura;
-		this.timepoExperiencia = timepoExperiencia;
+		this.tiempoExperiencia = timepoExperiencia;
 		this.tipoEspecialidad = tipoEspecialidad;
 	}
 
@@ -55,11 +55,11 @@ public class Doctor extends Persona{
 	public void setCodigoColegiatura(String codigoColegiatura) {
 		this.codigoColegiatura = codigoColegiatura;
 	}
-	public double getTimepoExperiencia() {
-		return timepoExperiencia;
+	public double getTiempoExperiencia() {
+		return tiempoExperiencia;
 	}
-	public void setTimepoExperiencia(double timepoExperiencia) {
-		this.timepoExperiencia = timepoExperiencia;
+	public void setTiempoExperiencia(double tiempoExperiencia) {
+		this.tiempoExperiencia = tiempoExperiencia;
 	}
 	public TipoEspecialidad getTipoEspecialidad() {
 		return tipoEspecialidad;

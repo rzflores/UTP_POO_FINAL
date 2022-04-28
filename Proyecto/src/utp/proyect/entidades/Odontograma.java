@@ -9,29 +9,41 @@ public class Odontograma {
 	private ArrayList<NumeroPieza> listaNumeroPieza;
 	private TipoOdontograma tipoOdontograma;
 	private Date fecha;
-		
+	private Doctor doctor;
+				
 	
 	@Override
 	public String toString() {
 		return "Odontograma [idOdontograma=" + idOdontograma + ", observacion=" + observacion + ", listaNumeroPieza="
-				+ listaNumeroPieza + ", tipoOdontograma=" + tipoOdontograma + ", fecha=" + fecha + "]";
+				+ listaNumeroPieza + ", tipoOdontograma=" + tipoOdontograma + ", fecha=" + fecha + ", doctor=" + doctor
+				+ "]";
 	}
 	
-	
-	
+
+
 	public Odontograma(int idOdontograma, String observacion, ArrayList<NumeroPieza> listaNumeroPieza,
-			TipoOdontograma tipoOdontograma, Date fecha) {
+			TipoOdontograma tipoOdontograma, Date fecha, Doctor doctor) {
 		super();
 		this.idOdontograma = idOdontograma;
 		this.observacion = observacion;
 		this.listaNumeroPieza = listaNumeroPieza;
 		this.tipoOdontograma = tipoOdontograma;
 		this.fecha = fecha;
+		this.doctor = doctor;
 	}
+
+
+
 	public Odontograma() {};
-
-
-
+	
+	
+	
+	public Doctor getDoctor() {
+		return doctor;
+	}
+	public void setDoctor(Doctor doctor) {
+		this.doctor = doctor;
+	}
 	public int getIdOdontograma() {
 		return idOdontograma;
 	}

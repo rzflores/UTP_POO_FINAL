@@ -6,6 +6,25 @@ public class TipoDocumento {
 	private String nombreCorto;
 	
 	
+	public TipoDocumento(int idTipoDocumento, String nombre, String nombreCorto) {
+		super();
+		this.idTipoDocumento = idTipoDocumento;
+		this.nombre = nombre;
+		this.nombreCorto = nombreCorto;
+	}
+	
+	public TipoDocumento() {}	
+			
+	@Override
+	public String toString() {
+		return "TipoDocumento [idTipoDocumento=" + idTipoDocumento + ", nombre=" + nombre + ", nombreCorto="
+				+ nombreCorto + "]";
+	}
+	
+	
+
+
+
 	public int getIdTipoDocumento() {
 		return idTipoDocumento;
 	}

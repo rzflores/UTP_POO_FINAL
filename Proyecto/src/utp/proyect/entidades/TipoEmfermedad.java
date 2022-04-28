@@ -3,20 +3,11 @@ package utp.proyect.entidades;
 public class TipoEmfermedad extends TipoAmenesis{
 	private int idTipoEmfermedad;
 	private String nombre;
-	
-	
-	
-	
-	
+		
 	@Override
 	public String toString() {
 		return  super.toString() +  "TipoEmfermedad [idTipoEmfermedad=" + idTipoEmfermedad + ", nombre=" + nombre + "]";
 	}
-	
-
-	
-
-
 
 	public TipoEmfermedad(String nombreCorto, String descripcion, int idTipoEmfermedad, String nombre) {
 		super(nombreCorto, descripcion);
@@ -26,11 +17,6 @@ public class TipoEmfermedad extends TipoAmenesis{
 	
 	public TipoEmfermedad() {}
 	
-
-
-
-
-
 
 	public int getIdTipoEmfermedad() {
 		return idTipoEmfermedad;
