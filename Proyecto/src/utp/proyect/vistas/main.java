@@ -1,15 +1,25 @@
 package utp.proyect.vistas;
 
 import java.sql.Date;
+import java.sql.SQLException;
 import java.sql.Time;
 import java.util.ArrayList;
 
-
+import utp.proyect.dao.DaoDoctor;
 import utp.proyect.entidades.*;
+import utp.proyect.patrones.SingletonConexion;
 
 public class main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)  {
+		
+		/*----------dbconec---------*/
+		
+		DaoDoctor dd = new DaoDoctor();
+		
+		
+		
+		
 		
 		
 		/*-----------------Tipo Documento-----------------*/
