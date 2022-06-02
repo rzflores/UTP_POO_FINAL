@@ -1,4 +1,4 @@
-package utp.proyect.patrones;
+package utp.proyect.conexion;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -41,6 +41,10 @@ public class SingletonConexion {
 		 }
 		 return instancia; 
 	}	
+	public static void cerrarConexion(Connection cn) throws SQLException {
+		cn.close();
+		instancia = null;
+	}
 }
 		      	
 	

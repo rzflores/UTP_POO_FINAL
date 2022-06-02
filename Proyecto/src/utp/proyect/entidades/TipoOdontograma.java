@@ -1,10 +1,10 @@
 package utp.proyect.entidades;
 
-public class TipoOdontograma {
-	private int idTipoOdontograma;
-	private String nombre;
-	private String nombreCorto;
-	private int cantidadPiezas;
+public  abstract class TipoOdontograma {
+	protected int idTipoOdontograma;
+	protected String nombre;
+	protected String nombreCorto;
+	protected int cantidadPiezas;
 	
 	
 	

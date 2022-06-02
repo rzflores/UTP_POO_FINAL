@@ -1,19 +1,33 @@
 package utp.proyect.entidades;
 
-public class Persona {	
-	private String primerNombre;
-	private String segundoNombre;
-	private String primerApellido;
-	private String segundoApellido;
-	private int edad;
-	private String numeroDocumento;	
-	private String correoElectronico;
-	private String contrasenia;
-	private String celular;
-	private TipoDocumento tipoDocumento;
+public abstract class Persona {	
+	protected String primerNombre;
+	protected String segundoNombre;
+	protected String primerApellido;
+	protected String segundoApellido;
+	protected int edad;
+	protected String numeroDocumento;	
+	protected String correoElectronico;
+	protected String contrasenia;
+	protected String celular;
+	protected TipoDocumento tipoDocumento;
 	
 	
-		
+	
+	public Persona() {};
+
+	
+
+	@Override
+	public String toString() {
+		return "Persona [primerNombre=" + primerNombre + ", segundoNombre=" + segundoNombre + ", primerApellido="
+				+ primerApellido + ", segundoApellido=" + segundoApellido + ", edad=" + edad + ", numeroDocumento="
+				+ numeroDocumento + ", correoElectronico=" + correoElectronico + ", contrasenia=" + contrasenia
+				+ ", celular=" + celular + ", tipoDocumento=" + tipoDocumento + "]";
+	}
+
+
+
 	public Persona(String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, int edad,
 			String numeroDocumento, String correoElectronico, String contrasenia, String celular,
 			TipoDocumento tipoDocumento) {
@@ -29,17 +43,9 @@ public class Persona {
 		this.celular = celular;
 		this.tipoDocumento = tipoDocumento;
 	}
-	
-	public Persona() {};
 
-	@Override
-	public String toString() {
-		return "Persona [primerNombre=" + primerNombre + ", segundoNombre=" + segundoNombre + ", primerApellido="
-				+ primerApellido + ", segundoApellido=" + segundoApellido + ", edad=" + edad + ", numeroDocumento="
-				+ numeroDocumento + ", correoElectronico=" + correoElectronico + ", contrasenia=" + contrasenia
-				+ ", celular=" + celular + ", tipoDocumento=" + tipoDocumento + "]";
-	}
-	
+
+
 	public String getPrimerNombre() {
 		return primerNombre;
 	}

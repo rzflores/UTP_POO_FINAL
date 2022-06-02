@@ -5,18 +5,31 @@ import java.sql.SQLException;
 import java.sql.Time;
 import java.util.ArrayList;
 
+import utp.proyect.conexion.SingletonConexion;
 import utp.proyect.dao.DaoDoctor;
 import utp.proyect.entidades.*;
-import utp.proyect.patrones.SingletonConexion;
+import utp.proyect.utilitarios.polimorfismo.loginEmail;
+import utp.proyect.utilitarios.polimorfismo.loginNumeroDocumento;
+import utp.proyect.utilitarios.polimorfismo.loginPolimorfismo;
 
 public class main {
 
 	public static void main(String[] args)  {
 		
 		/*----------dbconec---------*/
+		/*
+		loginPolimorfismo obj;
 		
-		DaoDoctor dd = new DaoDoctor();
+		obj = new loginNumeroDocumento();
+		boolean result1 = obj.login("ca-1235f", "123456");
+		System.out.println(result1);
+		obj = new loginEmail();
+		boolean result2 =  obj.login("admin@odonto.com", "123456");
+		System.out.println(result2);
 		
+		/*DaoAdministrador da = new DaoAdministrador();
+		boolean result = da.login("admin@odonto.com", "1234567");
+		System.out.println(result);
 		
 		
 		
@@ -38,7 +51,7 @@ public class main {
 	
 		
 		/*-----------------Tipo Especialidad-----------------*/
-		TipoEspecialidad teORT =  new TipoEspecialidad();
+		/*TipoEspecialidad teORT =  new TipoEspecialidad();
 		teORT.setIdTipoEspecialidad(1);
 		teORT.setNombre("Ortodoncia");
 		teORT.setDescripcion("aplicacion de brakets");
@@ -59,7 +72,7 @@ public class main {
 		d.setCorreoElectronico("doctor1@odontodent.com");
 		d.setContrasenia("123adwqe");
 		d.setTipoDocumento(tdD);		
-		d.setTipoEspecialidad(teORT);
+//		d.setTipoEspecialidad(teORT);
 		System.out.println("----------Doctor--------");
 		System.out.println(d.toString());
 		System.out.println("------------------------");
@@ -105,7 +118,7 @@ public class main {
 		
 		
 		/*--------------Consulta-------------------*/
-		Consulta c1 = new Consulta();
+		/*Consulta c1 = new Consulta();
 		Date fechaC1 = new Date(2022,04,25);
 		Time inicioConsultaC1 = new Time(11,30,50);
         Time finConsultaC1 = new Time(12,30,50);
@@ -141,7 +154,7 @@ public class main {
         
 		
         /*--------------Turno--------------*/
-        Turno tu1 = new Turno();		       
+        /*Turno tu1 = new Turno();		       
         Time tiempoInicio = new Time(10,30,50);
         Time tiempoFin = new Time(18,30,50);
         ArrayList<Consulta> listaConsultas =new ArrayList<Consulta>();
@@ -160,14 +173,14 @@ public class main {
 				
 		
 		/*-----------------Tipo Odontograma-----------------*/
-		TipoOdontograma tpA = new TipoOdontograma();
+		TipoOdontograma tpA = new TipoOdontogramaAdulto();
 		tpA.setIdTipoOdontograma(1);
 		tpA.setNombre("Adulto");
 		tpA.setNombreCorto("A");
 		tpA.setCantidadPiezas(38);
 		
 		
-		TipoOdontograma tpI = new TipoOdontograma();
+		TipoOdontograma tpI = new TipoOdontogramaMenor();
 		tpI.setIdTipoOdontograma(1);
 		tpI.setNombre("Infantil");
 		tpI.setNombreCorto("I");
@@ -176,7 +189,7 @@ public class main {
 		
 		
 		/*-----------------Tipo Color-----------------*/ 
-		TipoColor tcA = new TipoColor();
+		/*TipoColor tcA = new TipoColor();
 		tcA.setIdTipoColor(1);
 		tcA.setNombre("Azul");
 		tcA.setNombreCorto("Az");
@@ -190,7 +203,7 @@ public class main {
 	
 		
 		/*-----------------Tipo Diagnostico-----------------*/ 
-		TipoDiagnostico td1 = new TipoDiagnostico();
+		/*TipoDiagnostico td1 = new TipoDiagnostico();
 		td1.setIdTipoDiagnostico(1);
 		td1.setNombre("SE");
 		td1.setDescripcion("con sellador");
@@ -202,7 +215,7 @@ public class main {
 		td1.setTipoColor(tcR);
 		/*---------------------------------------------------*/
 		/*-----------------Numero Pieza-----------------*/
-		NumeroPieza np1 = new NumeroPieza();
+		/*NumeroPieza np1 = new NumeroPieza();
 		np1.setIdNumeroPieza(1);
 		np1.setNumero(32);
 		np1.setTipoDiagnostico(td1);
@@ -214,17 +227,28 @@ public class main {
 		/*----------------------------------------------*/
 		
 		/*-----------------Odontograma-----------------*/
+		
+		
+		
 		Odontograma odt = new Odontograma();
 		odt.setDoctor(d);
 		odt.setIdOdontograma(1);
-		odt.setTipoOdontograma(tpA);
-		ArrayList<NumeroPieza> listaNumeroPiezas = new ArrayList<NumeroPieza>();
-		listaNumeroPiezas.add(np1);
-		listaNumeroPiezas.add(np2);
-		odt.setListaNumeroPieza(listaNumeroPiezas);
+		odt.setTipoOdontograma(tpA);					
 		odt.setObservacion("tiene 2 piezas con problemas");
 		Date fechaOdonto = new Date(27,04,2022);
 		odt.setFecha(fechaOdonto);
+		System.out.println("--------------Odontograma---------------");
+		System.out.println(odt.toString());
+		System.out.println("----------------------------------------");
+		
+		
+		Odontograma odt2 = new Odontograma();
+		odt.setDoctor(d);
+		odt.setIdOdontograma(1);
+		odt.setTipoOdontograma(tpI);					
+		odt.setObservacion("tiene 2 piezas con problemas");
+		Date fechaOdonto2 = new Date(27,04,2022);
+		odt.setFecha(fechaOdonto2);
 		System.out.println("--------------Odontograma---------------");
 		System.out.println(odt.toString());
 		System.out.println("----------------------------------------");
@@ -233,16 +257,19 @@ public class main {
 		
 		
 		/*-----------------Tipo Emfermedad----------------*/
-		TipoEmfermedad te = new TipoEmfermedad();
-		te.setIdTipoEmfermedad(1);
-		te.setNombre("diabetes");
-		te.setDescripcion("diabetes tipo 1");
-		ArrayList<TipoEmfermedad> listaTipoEmfermedad = new ArrayList<TipoEmfermedad>();
-		listaTipoEmfermedad.add(te);
+//		TipoEmfermedad te = new TipoEmfermedad();
+//		te.setIdTipoEmfermedad(1);
+//		te.setNombre("diabetes");
+//		te.setDescripcion("diabetes tipo 1");
+//		te.setNombreCorto("dibet1");
+//		ArrayList<TipoEmfermedad> listaTipoEmfermedad = new ArrayList<TipoEmfermedad>();
+//		
+//		System.out.println(te.toString());
+		
 		/*----------------------------------------------*/
 		
 		/*-----------------Tipo Alergia Medicamento----------------*/
-		TipoAlergiaMedicamento tam = new TipoAlergiaMedicamento();
+		/*TipoAlergiaMedicamento tam = new TipoAlergiaMedicamento();
 		tam.setIdTipoAlergiaMedicamento(1);
 		tam.setNombreMedicamento("Ab broncol");
 		ArrayList<TipoAlergiaMedicamento> listaTipoAlergiaMedicamento = new ArrayList<TipoAlergiaMedicamento>();
@@ -251,7 +278,7 @@ public class main {
 		/*---------------------------------------------------------*/
 		
 		/*-----------------Observacion----------------*/
-		Observacion ob1 = new Observacion();
+		/*Observacion ob1 = new Observacion();
 		ob1.setIdObservacion(1);
 		ob1.setDoctor(d);
 		Date fechaObservacion = new Date(28,04,2022);
@@ -268,7 +295,7 @@ public class main {
 		/*--------------------------------------------*/
 		
 		/*-----------------historia clinica----------------*/
-		HistoriaClinica hc1 = new HistoriaClinica();
+		/*HistoriaClinica hc1 = new HistoriaClinica();
 		Date fechaCreado = new Date(2022,04,25);
 		Date fechaModificado = new Date(2022,04,25);
 		ArrayList<Consulta> listaConsultasPaciente =new ArrayList<Consulta>();

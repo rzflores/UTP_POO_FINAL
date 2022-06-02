@@ -1,8 +1,9 @@
 package utp.proyect.entidades;
 
-public class TipoAmenesis {
-	private String nombreCorto;
-	private String descripcion;
+public abstract class TipoAmenesis {
+	private  String nombreCorto;
+	private  String descripcion;
+	
 	public String getNombreCorto() {
 		return nombreCorto;
 	}

@@ -1,24 +1,31 @@
 package utp.proyect.entidades;
 
-public class Paciente extends Persona {
+import java.util.ArrayList;
+
+import utp.proyect.dao.DaoDoctor;
+import utp.proyect.dao.DaoPaciente;
+import utp.proyect.interfaces.IListarConsultas;
+
+public class Paciente extends Persona implements IListarConsultas{
 	private int idPaciente;
 	private String celularTrabajo;
 	private String direccion;
 	private boolean esPrimeraVisita;
 	
 
-	public Paciente(int idPaciente , String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, int edad,
-			String numeroDocumento, String correoElectronico, String contrasenia, String celular,
-			TipoDocumento tipoDocumento, String celularTrabajo, String direccion, boolean esPrimeraVisita) {
-		super(primerNombre, segundoNombre, primerApellido, segundoApellido, edad, numeroDocumento, correoElectronico,
-				contrasenia, celular, tipoDocumento);
+	
+	
+
+
+	public Paciente(int idPaciente, String celularTrabajo, String direccion, boolean esPrimeraVisita) {
+		super();
 		this.idPaciente = idPaciente;
 		this.celularTrabajo = celularTrabajo;
 		this.direccion = direccion;
 		this.esPrimeraVisita = esPrimeraVisita;
 	}
-	
-	
+
+
 
 	@Override
 	public String toString() {
@@ -58,4 +65,16 @@ public class Paciente extends Persona {
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
+
+
+
+	@Override
+	public ArrayList<Consulta> listarConsultas() {
+		DaoPaciente daoP = new DaoPaciente();		
+		return daoP.listarConsultas(this.idPaciente);
+	}
+	
+	
+	
+	
 }
